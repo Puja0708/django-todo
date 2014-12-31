@@ -1,0 +1,16 @@
+<html>
+<head>
+<title> to-do list status </title>
+</head>
+<body>
+<h1> to-do list </h1>
+{%for list_dict in todo_listing%}
+	<h2> {{ list_dict.list_object.title }} </h2>
+	<ul>
+		<li> number of items : {{ list_dict.item_count }} </li>
+		<li> number completed : {{ list_dict.items_complete }} ({{ list_dict.percent_complete }}%) </li>
+	</ul>
+{% endfor %}
+
+</body>
+</html>
